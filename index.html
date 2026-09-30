@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mara Market - goods and trusted local services, paid with M-Pesa." />
+  <title>Mara Market | Shop local, live better</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="topline">
+    <div class="wrap topline-inner">
+      <span data-i18n="topMessage">Free delivery on orders over KSh 3,000 in Nairobi</span>
+      <span class="topline-right"><span class="status-dot"></span><span data-i18n="mpesaReady">M-Pesa payments ready</span></span>
+    </div>
+  </div>
+
+  <header class="site-header wrap">
+    <a class="brand" href="#top" aria-label="Mara Market home"><span class="brand-mark">M</span><span>MARA<span class="brand-light">market</span></span></a>
+    <div class="search-wrap">
+      <span class="search-icon" aria-hidden="true">⌕</span>
+      <input id="searchInput" type="search" placeholder="Search products, services..." data-i18n-placeholder="searchPlaceholder" />
+      <kbd>⌘ K</kbd>
+    </div>
+    <div class="header-actions">
+      <button class="language-button" id="languageToggle" type="button" aria-label="Change language"><span class="globe">◎</span><span id="languageLabel">SW</span></button>
+      <button class="cart-button" id="cartOpen" type="button"><span class="cart-icon">▱</span><span data-i18n="cart">Cart</span><b id="cartCount">0</b></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="eyebrow">THE GOOD LIFE, DELIVERED</span></div>
+        <h1 data-i18n="heroTitle">Good things,<br><em>close to home.</em></h1>
+        <p data-i18n="heroText">Shop standout goods and book brilliant local services from people who know their craft.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#shop" data-i18n="shopNow">Shop now <span>↗</span></a>
+          <a class="text-link" href="#how-it-works" data-i18n="howItWorks">How it works <span>↓</span></a>
+        </div>
+        <div class="hero-note"><span class="avatar-stack"><i>J</i><i>A</i><i>N</i></span><span><strong data-i18n="heroNoteStrong">12,000+ locals</strong> <span data-i18n="heroNoteText">shop happily here</span></span></div>
+      </div>
+      <div class="hero-art" aria-label="Featured handmade basket and local produce">
+        <div class="sun-shape"></div><div class="art-label">NEW<br><b>LOCAL<br>FAVOURITES</b></div>
+        <div class="basket basket-back"></div><div class="basket basket-main"><span class="basket-handle"></span><span class="basket-weave"></span></div>
+        <div class="leaf leaf-one"></div><div class="leaf leaf-two"></div><div class="leaf leaf-three"></div>
+        <div class="produce produce-one"></div><div class="produce produce-two"></div><div class="produce produce-three"></div>
+        <div class="hero-caption"><span data-i18n="heroCaption">Fresh picks, happy homes</span><span>—</span><b>KSh 1,250</b></div>
+      </div>
+    </section>
+
+    <section class="category-row wrap" aria-label="Categories">
+      <button class="category active" data-category="all"><span class="category-icon all-icon">✦</span><span data-i18n="all">All picks</span></button>
+      <button class="category" data-category="home"><span class="category-icon home-icon">⌂</span><span data-i18n="home">Home & living</span></button>
+      <button class="category" data-category="style"><span class="category-icon style-icon">✧</span><span data-i18n="style">Style</span></button>
+      <button class="category" data-category="food"><span class="category-icon food-icon">◒</span><span data-i18n="food">Food & drink</span></button>
+      <button class="category" data-category="services"><span class="category-icon service-icon">✳</span><span data-i18n="services">Services</span></button>
+    </section>
+
+    <section class="shop-section wrap" id="shop">
+      <div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="curated">CURATED FOR YOU</span></div><h2 data-i18n="discover">Discover your next favourite.</h2></div><div class="sort-wrap"><label for="sortSelect" data-i18n="sortBy">Sort by</label><select id="sortSelect"><option value="featured" data-i18n="featured">Featured</option><option value="low" data-i18n="priceLow">Price: low to high</option><option value="high" data-i18n="priceHigh">Price: high to low</option></select></div></div>
+      <div class="product-grid" id="productGrid"></div>
+      <div class="empty-state" id="emptyState" hidden><span>⌕</span><h3 data-i18n="noResults">Nothing found yet.</h3><p data-i18n="tryAnother">Try another search or category.</p></div>
+    </section>
+
+    <section class="how-section wrap" id="how-it-works">
+      <div class="how-intro"><div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="simple">SIMPLE BY DESIGN</span></div><h2 data-i18n="easyTitle">From browsing<br>to <em>beautifully<br>sorted.</em></h2></div>
+      <div class="steps"><div class="step"><span class="step-num">01</span><div><h3 data-i18n="stepOneTitle">Pick your thing</h3><p data-i18n="stepOneText">Find one-of-a-kind goods and people worth knowing.</p></div></div><div class="step"><span class="step-num">02</span><div><h3 data-i18n="stepTwoTitle">Pay your way</h3><p data-i18n="stepTwoText">Use M-Pesa for quick, secure checkout every time.</p></div></div><div class="step"><span class="step-num">03</span><div><h3 data-i18n="stepThreeTitle">Enjoy the good stuff</h3><p data-i18n="stepThreeText">Get it delivered or meet your local maker.</p></div></div></div>
+    </section>
+
+    <section class="newsletter wrap"><div><div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="newsletterEyebrow">THE MARA NOTE</span></div><h2 data-i18n="newsletterTitle">Small joys, sent weekly.</h2><p data-i18n="newsletterText">New makers, good ideas and the occasional very good deal.</p></div><form id="newsletterForm"><input type="email" required placeholder="Your email address" data-i18n-placeholder="emailPlaceholder"><button class="button button-dark" type="submit" data-i18n="join">Join us <span>↗</span></button></form></section>
+  </main>
+
+  <footer class="site-footer"><div class="wrap footer-inner"><a class="brand" href="#top"><span class="brand-mark">M</span><span>MARA<span class="brand-light">market</span></span></a><span data-i18n="footerText">Made for the everyday good life in Kenya.</span><span>© 2024 Mara Market</span></div></footer>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true"><div class="drawer-head"><div><span class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="yourBag">YOUR BAG</span></span><h2 data-i18n="cart">Cart</h2></div><button class="close-button" id="cartClose" aria-label="Close cart">×</button></div><div id="cartItems" class="cart-items"></div><div class="cart-empty" id="cartEmpty"><div class="empty-basket">▱</div><h3 data-i18n="emptyCart">Your cart is waiting.</h3><p data-i18n="emptyCartText">Add a few good things to get started.</p></div><div class="cart-footer" id="cartFooter"><div class="total-row"><span data-i18n="subtotal">Subtotal</span><strong id="cartTotal">KSh 0</strong></div><p class="delivery-note" data-i18n="deliveryNote">Delivery calculated at checkout</p><button class="button button-dark full-button" id="checkoutOpen" type="button" data-i18n="checkout">Checkout with M-Pesa <span>↗</span></button></div></aside><div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <div class="modal-backdrop" id="checkoutModal" aria-hidden="true"><div class="checkout-modal"><button class="close-button modal-close" id="checkoutClose" aria-label="Close checkout">×</button><div class="checkout-header"><span class="mpesa-badge">M-PESA</span><span class="secure-label">⌁ <span data-i18n="secure">Secure checkout</span></span><h2 data-i18n="completeOrder">Complete your order.</h2><p data-i18n="checkoutText">Enter your details and we'll send an M-Pesa prompt to your phone.</p></div><form id="checkoutForm"><label><span data-i18n="nameLabel">Full name</span><input name="name" required placeholder="e.g. Amina Wanjiku"></label><label><span data-i18n="phoneLabel">M-Pesa phone number</span><input name="phone" required inputmode="tel" placeholder="07XX XXX XXX"></label><label><span data-i18n="locationLabel">Delivery location</span><input name="location" required placeholder="e.g. Westlands, Nairobi"></label><div class="payment-summary"><span data-i18n="paying">You are paying</span><strong id="checkoutTotal">KSh 0</strong></div><button class="button mpesa-button" type="submit"><span class="mpesa-logo">M</span><span data-i18n="payMpesa">Pay with M-Pesa</span><span>↗</span></button></form><div class="checkout-success" id="checkoutSuccess" hidden><div class="success-mark">✓</div><h3 data-i18n="paymentSent">Payment prompt sent!</h3><p data-i18n="paymentSentText">Check your phone to complete the M-Pesa payment. Your order number is <strong>#MM-2048</strong>.</p><button class="text-link" id="successClose" type="button" data-i18n="backToShop">Back to shopping <span>↗</span></button></div></div></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
